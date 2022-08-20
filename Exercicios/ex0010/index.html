@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links e Ancoras em html</title>
+    <style>
+        body{
+            background-color: hsl(262, 19%, 78%);
+        }
+    </style>
+</head>
+<body>
+   <h1>Usando Links Externos</h1> <!--Usando link, seleciona Crtl + Shift + p
++ enter + a-->
+   <p>Você pode acessar o meu <a href="http://gustavoguanabara.github.io" target="_blank" rel="external">repositório público no GitHub</a></p><!--O Rel external = link do tipo externo e target="_blank" é um alvo em branco para abrir uma nova guia.-->
+   <p>Voce tambem pode acessar o meu <a href="http://youtube.com/cursoemvideo/" target="_blank" rel="external">canal no YouTube.</a></p>
+   <h1>Usando Links internos</h1>
+   <p>Esta é a primeira página do site. Se você quiser, pode acessar tembem a minha <a href="pg002.html" rel="next" target="_self">segunda página.</a></p>
+   <p>Você pode acessar a nossa pagina de <a href="noticias/pg003.html" rel="next" target="_self">Noticias</a></p>
+   <h1>Links para Downloads</h1>
+   <ul>
+    <li><a href="Livro/carro.pdf" download="carro.pdf" type="application/pdf">Carro.</a></li>
+    <li><a href="Livro/compactado/carro.zip" download="carro.zip" type="application/zip">Meu carro.</a></li>
+   </ul>
+</body>
+</html>

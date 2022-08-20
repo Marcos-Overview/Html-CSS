@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão Links</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        a{
+            color:yellowgreen;
+            text-decoration: none;/*s/ sublinhados*/
+            font-weight: light;
+        }
+        a:visited{
+            color: red;
+        }
+        a:hover{
+            color: black;/*colocar a cor da letra*/
+            text-decoration: underline;/*colocar linha*/
+        }
+        a:active{
+            color: rgb(255, 192, 237); /*ficar na cor desejada quando clicado*/
+        }
+        .especial{
+            background-color: aqua;
+        }
+        .especial::before{
+            content: '☹ ';
+            text-decoration: none;
+            font-weight: lighter;
+            color: darkgray;
+        }
+        .especial::after{
+            content: ' ✄';
+            text-decoration: none;
+            font-weight: bolder;
+            color: steelblue;
+        }
+          /*
+        a::before{
+            content: '✧ ' ;
+            text-decoration: none;
+            font-weight: bolder;
+            color: rgb(93, 104, 148);
+        }
+        a::after{
+            content: ' ☏';
+            text-decoration: none;
+            font-weight: light;
+        }*/
+    </style>
+</head>
+<body>
+   <h1>Personalisando Links</h1> 
+   <ul>
+    <li><a href="http://www.youtube.com" target="_blank" class="especial">Site Youtube</a></li>
+    <li><a href="https://github.com/gustavoguanabara" target="_blank">Canal no gitHub</a></li>
+    <li><a href="http://www.google.com" target="_blank">Site do Goggle</a></li>
+    <li><a href="https://www.premierleague.com" target="_blank">Premier ligue</a></li>
+    <li><a href="https://www.tottenhamhotspur.com/" target="_blank" class="especial">Site do Tott</a></li>
+   </ul>
+</body>
+</html>

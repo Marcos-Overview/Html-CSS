@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de responsividade</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            min-width: 280px; /*largura dos celulares antigos*/
+            max-width: 800px;
+            margin: auto; /*ficar centralizado*/
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis cupiditate, aliquid animi quasi non perspiciatis id fugiat aut explicabo? Dolor quasi nesciunt assumenda, accusamus obcaecati aspernatur ducimus ab quos veniam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsa inventore impedit recusandae illum a, tenetur incidunt ipsum? Assumenda neque incidunt sunt doloribus quibusdam excepturi cumque itaque. Consequatur, beatae distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, amet nam. Debitis, voluptatem doloremque ipsam magni voluptatibus sunt nostrum. Quo dignissimos exercitationem in nulla neque ipsum laborum inventore officia veniam?</p>
+        <picture> <!--Usar o Picture quando a tela for muito pequena para ter responsividade!-->
+            <source media="(max-width:600px)" srcset="pacote-projeto-d010/imagens/irina-blok-pq.jpg"><!--quando ficar em 800px ele vai mostrar outra imagem da irina block para deixar mais responsivo o site-->
+            <img src="pacote-projeto-d010/imagens/irina-blok.jpg" alt="Irina block">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis cupiditate, aliquid animi quasi non perspiciatis id fugiat aut explicabo? Dolor quasi nesciunt assumenda, accusamus obcaecati aspernatur ducimus ab quos veniam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsa inventore impedit recusandae illum a, tenetur incidunt ipsum? Assumenda neque incidunt sunt doloribus quibusdam excepturi cumque itaque. Consequatur, beatae distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, amet nam. Debitis, voluptatem doloremque ipsam magni voluptatibus sunt nostrum. Quo dignissimos exercitationem in nulla neque ipsum laborum inventore officia veniam?</p>
+    </main>
+    
+</body>
+</html>

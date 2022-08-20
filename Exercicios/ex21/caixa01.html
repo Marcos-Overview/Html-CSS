@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixa</title>
+    <style>
+        /*usar a opão de inpecionar para testar antes de fazer os codigos!*/
+        h1{ /*Box-Level*/
+            /*display: inline; casdo eu queira deixar o seu bloco na mesma linha*/
+
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+            
+            /*
+            border-width: 10px; Espessura da borda
+            border-style: solid;
+            border-color: darkslategray; 
+
+            shot lines na ordem de cima*/
+            border: 10px solid darkslategray ;
+            
+            /* padding-top: 10px; afastamento/espaço entre a letra e a borda
+            padding-right: 10x;
+            padding-bottom: 10px;
+            padding-left:10px ; */
+            padding: 10px 10px 10px 10px; /*ou pode colocar:padding: 10px  e nesse caso ai vc informa que todos os lados são iguaise quando vc coloca dois numero diferentes tipo padding: 10px 20px significa que o de cima e o de baixo e 10px e os das laterais é 20px*/
+
+            /* margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;
+            margin:auto; é pra centralizar a caixa*/
+            margin: 20px auto 40px auto; /*pode ser assim tmbém -> margin: 20px 20px 40px 20px;*/
+
+
+            /*Autline é o espaço entre a borda e a margem
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;*/
+            outline: 5px dashed salmon;
+
+        }
+        a{/*Inline-Level*/
+            /*display: block; Se vc quiser mostrar como um bloco/em ouytra linha*/
+            border-width: 5px;
+            border-style: groove;
+            border-color: red;
+
+            padding-top: 10px; /*afastamento/espaço entre a letra e a borda*/
+            padding-right: 10x;
+            padding-bottom: 10px;
+            padding-left:10px ;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixas box-level</h1>
+    <p>Paragrafos são tambem exemplos de Box-Level,<a href="#"> Links são exemplos de xcaisas inline-level. </a>. Vamos ver como funciona.</p>
+</body>
+</html>

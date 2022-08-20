@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face{
+    font-family: 'Android';
+    src: url('/DESAFIOS/D010/pacote-projeto-d010/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+
+}
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque:'Bebas Neue', 'cursive';
+    --fonte-android: 'Android','cursive';
+}
+
+/*quando vc cria um seletor com (*) é para todos*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+body{
+    background-color: #ebebc5;/*site color.adobe, monocromático*/
+    font-family: var(--fonte-padrão);
+}
+
+a.externo::after {
+    content: '\1F517';
+}
+
+header{  
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    min-height:150px ;
+    text-align: center;
+    padding-top: 40px; /*Espaço entre o h1 e o topo*/
+
+}
+
+header > h1  {
+    color:white;
+    font-family: var(--fonte-destaque); 
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px; /*Espaço entre o h1 e o p*/
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.266);/*sombra preta com transparencia*/
+    
+}
+
+header > p {
+    font-family: var(--fonte-padrão);
+    font-size: 1.2em;
+    color: white;
+    max-width: 500px; /*deixa cumprimento maixmo de 500px, tranformando em um bloco*/
+    padding-right: 10px; /*quando vc espremer a tele ele não encostar na margim lateral*/
+    padding-left: 10px; /*quando vc espremer a tele ele não encostar na margim lateral*/
+    margin: auto; /*centralizar*/
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.266);
+}   
+
+nav{
+    background-color: #063d1e;
+    padding: 10px;/*afastamento da margem de todos os lados*/
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.201);
+}
+
+nav > a {
+    color: #c5ebd6;
+    padding: 10px; /*afastamento entre eles*/
+    border-radius: 5px;
+    text-decoration: none; /*Tirar o sublinhado*/
+    font-weight: bold;
+    transition-duration: .5s; /*quando passar o mause ele ter uma transição de 'x' segundos*/
+
+}
+
+nav > a:hover{ /*Quando eu passar o mouse em cima*/
+    background-color: #2fa866; /*tem que ser mais clara do que o color para dar contraste*/
+    color: #063d1e;
+}
+main {
+
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto; /*Centralizar o conteudo para telas maiores*/ 
+    margin-bottom: 30px; /*para não deixar colado com o rodapé*/
+    padding: 20px; /*afastar o contudo do body, estava muito perto*/
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.401);
+    border-bottom-left-radius: 10px; /*arredondar a bordar de baixo lado esquerdo*/
+    border-bottom-right-radius: 10px;/*arredondar a bordar de baixo lado direito*/
+
+}
+
+main h1 {
+    color: #1a5c37;
+    font-family: var(--fonte-android);
+    font-size: 1.8em;
+    font-weight: normal;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: #2a9058;
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor0), transparent );
+    text-indent: 8px;/*Recuou da primeira palavra*/
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px; /*Recuo da primeira palavra*/
+    font-size: 1em;
+    line-height: 1.5em; /*Altura entre as linhas*/
+}
+
+main strong{
+    color: #1a5c37;
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight:bold;
+    color: #063d1e;
+    background-color: #83e1ad;
+    padding: 2px 6px; /*cime e embaixo/ laterais*/
+    
+}
+
+main a:hover { /*Quando eu passar o mouse em cima*/
+    text-decoration: underline; /*Colocar o sublinhado*/
+    color:  #1a5c37;
+}
+
+main img {/*foi diferentes dos outros pq não teve imagem menor como o da  Irina Blok e o bugdroid*/
+    width: 100%;
+
+}
+main img.pequena {
+    
+    max-width: 350px;
+    display: block; /*tive que usar para centralizar a imagem dessa vez*/
+    margin: auto;/*Centralizar o conteudo para telas maiores, mas ainda não foi o suficiente*/
+}
+
+div.video {
+    background-color: #063d1e;
+    margin:0px -20px 30px -20px; /*menos 20 foi pra cobrir ate  o main*/
+    padding: 20px;
+    padding-bottom: 59%; /*muda de video p/ video é o espaço em preto que fica no video no momento do play , nas bordas*/
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%; /*distancia da crista superior esquerda ate o topo do bloco*/
+    left: 5%; /*distancia da crista esquerda ate o lado esquerdo do bloco*/
+    width: 90%; /*porcentagem de cumprimento ocupada pelo video no bloco*/
+    height: 90%; /*porcentagem de altura ocupada pelo video no bloco*/
+}
+
+aside{
+    background-color: #83e1ad;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.256);
+}
+
+aside > h3 {
+    background-color: #2a9058;
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*cima, direita, baixo, esquerda / (margem negativa)  */
+    border-radius: 10px 10px 0px 0px; /*cima direita, cima esquerda, baixo direita, baixo esquerda*/
+}
+aside > ul {
+    list-style-type: '\2714\002000'; /* o ✔️ consegui no https://emojipedia.org/  /  o 002000 é para da espaço entre o ✔️ e o que vem depois dele e Não é compativel com todos os navegadores*/
+    list-style-position: inside; /*O normal é a bolinha ficar do lado de fora, por conta disso a gente tem q colocar inside*/
+    columns: 2; /* divide a lista por uma quantidade 'x' */
+}
+
+footer{
+    background-color:#063d1e ;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-size: bolder;
+    text-decoration: none; /*tirar o sublinhado*/
+}
+
+footer a:hover { /*Quando eu passar o mouse em cima*/
+    text-decoration: underline;
+    color: #2fa866;
+
+}
