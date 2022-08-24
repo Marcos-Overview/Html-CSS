@@ -1,0 +1,208 @@
+@charset "UFT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+@font-face{
+    font-family: 'Android';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{
+    --cor00: #87f0ee;
+    --cor01: #15D4D0;
+    --cor02: #10A19E;
+    --cor03: #085453;
+    --cor04: #13302f;
+
+    --font-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque:'Merienda', 'cursive';
+    --font-android:'Android', 'cursive';
+
+}
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+body{
+    background-color: antiquewhite;
+    font-family: var(--font-padrão);
+}
+
+a.externo::after{
+    content: '\1F517';
+}
+
+header{
+    background-image: linear-gradient( to bottom , var(--cor00), var(--cor03));
+    font-family: var(--font-padrão);
+    text-align: center;
+    padding-top: 40px;
+    min-height: 150px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--font-destaque);
+    font-size: 3em;
+    font-weight: lighter;
+    margin-bottom: 20px; /*Espaço entre o h1 e o p*/
+    text-shadow: 1px 1px black ;
+}
+
+header > p {
+    color: white;
+    font-family: var(--font-padrão);
+    font-size: 1.2em;
+    margin: auto;/*Centralizar p telas menores*/
+    max-width: 500px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.267); /*sombra p/ direita e p/ baixo e cor*/
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav{
+    background-color: #085453;
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.208); /*lado esq p dir , cima e pra baixo*/
+}
+
+nav > a {
+    color: #87f0ee;
+    font-family: var(--font-padrão);
+    font-weight: bolder;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+nav a:hover{
+    background-color:#0d9391;
+    color: white;  
+}
+
+main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto; /*Centralizar o conteudo para telas maiores*/ 
+    margin-bottom: 30px;
+    padding: 20px; /*Afastar o conteudo do body*/
+    box-shadow: 0px 0px 7px black;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+main h1 {
+    color: #10a19e;
+    font-family: var(--font-destaque);
+    font-weight: lighter;
+    font-size: 1.8em;
+}
+
+main h2 {
+    color: #10a19e;
+    font-family: var(--font-destaque);
+    font-weight: lighter;
+    font-size: 1.5em;
+    background-image: linear-gradient(to right, #87f0ee, transparent);
+    text-indent: 8px; /*Recuou da primeira linha*/
+}
+
+main p {
+    text-align: justify;
+    text-indent: 30px;
+    margin: 15px 0px;
+    font-size: 1em;
+}
+
+main strong { /*Tudo que estiver em negreito vai para essa conf.*/
+    color: #15D4D0;
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #13302f;
+    background-color:#15D4D0 ;
+    padding-left: 5px;
+    padding-right: 6px;
+    border-radius: 6px;
+}
+
+main a:hover{
+    text-decoration: underline;
+}
+
+main img { /*Artificio usado quando ñ tem outra imagem menor*/
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 350px; /*para celulares*/
+    display: block; /*centralizar imagem*/
+    margin: auto; /*centralizar o conteudo em telas menos, casou bem com o display: block;*/
+}
+div.video{ /*criar a class video para editar aqui*/
+    background-color: #085453;  
+    padding-bottom: 59%; /*Evitar o fundo preto*/
+    margin: 0px -20px 30px -20px;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%; /*distancia entre o tôpo e o video*/
+    left: 5%; /*distancia entre o main esquerdo e o video*/
+    bottom: 5%; /*distancia entre a parte de baixo e o video*/
+    right: 5%; /*distancia entre o main direito e o video*/
+    width: 91%; /*contruir cumprimento do video em relação ao quadro*/
+    height: 90%; /*contruir altura do video em relação ao quadro*/
+}
+
+aside{
+    background-color: #87f0ee;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.212);
+}
+
+aside > h3 {
+    background-color: #10a19e;
+    margin: -10px -10px 0px -10px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px 10px 0px 0px; 
+}
+
+aside > ul {
+    columns: 2;
+    list-style-position: inside; /*colocar a bolinha pra dentro do quadro*/
+    list-style-type: '\2714\002000'; /* o ✔️ consegui no https://emojipedia.org/  /  o 002000 é para da espaço entre o ✔️ e o que vem depois dele e Não é compativel com todos os navegadores*/
+}
+
+footer{
+    background-color: #0d9391;
+    color: white;
+    font-family: var(--font-padrão);
+    padding: 4px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: #13302f;
+}
+
+
