@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de tabelas grandes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position: relative; /*Configuração comportamental para fixar o cabeçario quando eu rolar p/ baixo*/
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;            
+        }
+        
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky; /*Colado*/
+            top: -1px; /*colou as palavras estado e população mas não o background*/
+            background-color: gray; /*Colocar na mesma cor do cabeçário*/
+            /*Funciona ate a table, quando chega no paragrafo não funciona mais*/
+        }
+
+        tfoot{
+            background-color: gray;
+            color: white;
+        }
+
+        tbody > tr:nth-child(odd){ /*2n-1*/
+            background-color: white;
+        }  
+
+        tbody > tr:nth-child(even){ /*2n*/
+            background-color: lightgray;
+        /*Todo tr que é filho de Tbody vai ficar com o background cinza de 2 em 2 ou 
+            
+        * Colocar tbody > tr:nth-child(odd) ou tbody > tr:nth-child(2n - 1) que é são as linhas impares tipo: linha1, linha3, linha5, etc. 
+          
+        * tbody > tr:nth-child(even) que ai é Par*/ 
+            
+        }
+
+        td.num{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes </h1>
+    <!--
+        Anatomia para tabelas grandes
+        TABLE
+            CAPTION (LEGENDA)
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH 
+            TFOOT
+                TR, TD, TH 
+
+    -->
+
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+
+            <tr>
+                <th scope="col">Estado</th> <!-- th: Cabeçalho-->
+                
+                <th scope="col" style="width:50px ;">População</th><!-- scope="col" quer dizer que a população e o estado é referente a coluna e não a linha-->
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td> <!--td: pq é dado-->
+                <td class="num"> 45.919.649</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.106.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.264.043</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">564.760.427</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">199.298.979</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">281.707.156</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">98.067.881</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">148.894.441</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">1.245.870.798</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">95.730.684	</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">329.642.182</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">340.203.329</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">1.559.167.889</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">46.074.447</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">56.467.242</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">52.809.602</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">903.207.019</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">27.843.295</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">142.470.762</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">5.760.783</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">357.145.534</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">21.925.424</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">237.765.240</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">277.466.763</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">164.123.964</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">142.470.762</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">223.644.527</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th> <!--scope="row"> quer dizer que o Total de habitantes é refente a linha seguinte e não a coluna -->
+                <td class="num"><strong>3.450.380.269</strong></td>
+            </tr>
+        </tfoot>
+
+    </table>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repellat quibusdam ducimus commodi qui, consectetur quaerat iste dolorum, eius obcaecati similique aspernatur vel? Cum ad eos tenetur asperiores veritatis quo?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolore repudiandae officia, omnis quibusdam cum corporis molestias corrupti iusto distinctio, repellendus, quod error delectus possimus necessitatibus suscipit qui placeat commodi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusamus magni, recusandae, harum sequi repudiandae quis facilis doloribus consequuntur consequatur atque numquam accusantium? Corrupti rem vero doloribus aliquid consequatur quam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus alias odit omnis consequuntur. Eligendi nam est quos rem. Laudantium, ab. Quisquam ipsum tenetur ad saepe porro aspernatur ullam beatae autem.
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repellat quibusdam ducimus commodi qui, consectetur quaerat iste dolorum, eius obcaecati similique aspernatur vel? Cum ad eos tenetur asperiores veritatis quo?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolore repudiandae officia, omnis quibusdam cum corporis molestias corrupti iusto distinctio, repellendus, quod error delectus possimus necessitatibus suscipit qui placeat commodi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusamus magni, recusandae, harum sequi repudiandae quis facilis doloribus consequuntur consequatur atque numquam accusantium? Corrupti rem vero doloribus aliquid consequatur quam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus alias odit omnis consequuntur. Eligendi nam est quos rem. Laudantium, ab. Quisquam ipsum tenetur ad saepe porro aspernatur ullam beatae autem.
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repellat quibusdam ducimus commodi qui, consectetur quaerat iste dolorum, eius obcaecati similique aspernatur vel? Cum ad eos tenetur asperiores veritatis quo?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolore repudiandae officia, omnis quibusdam cum corporis molestias corrupti iusto distinctio, repellendus, quod error delectus possimus necessitatibus suscipit qui placeat commodi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusamus magni, recusandae, harum sequi repudiandae quis facilis doloribus consequuntur consequatur atque numquam accusantium? Corrupti rem vero doloribus aliquid consequatur quam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus alias odit omnis consequuntur. Eligendi nam est quos rem. Laudantium, ab. Quisquam ipsum tenetur ad saepe porro aspernatur ullam beatae autem.
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repellat quibusdam ducimus commodi qui, consectetur quaerat iste dolorum, eius obcaecati similique aspernatur vel? Cum ad eos tenetur asperiores veritatis quo?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolore repudiandae officia, omnis quibusdam cum corporis molestias corrupti iusto distinctio, repellendus, quod error delectus possimus necessitatibus suscipit qui placeat commodi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusamus magni, recusandae, harum sequi repudiandae quis facilis doloribus consequuntur consequatur atque numquam accusantium? Corrupti rem vero doloribus aliquid consequatur quam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus alias odit omnis consequuntur. Eligendi nam est quos rem. Laudantium, ab. Quisquam ipsum tenetur ad saepe porro aspernatur ullam beatae autem.
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repellat quibusdam ducimus commodi qui, consectetur quaerat iste dolorum, eius obcaecati similique aspernatur vel? Cum ad eos tenetur asperiores veritatis quo?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut dolore repudiandae officia, omnis quibusdam cum corporis molestias corrupti iusto distinctio, repellendus, quod error delectus possimus necessitatibus suscipit qui placeat commodi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusamus magni, recusandae, harum sequi repudiandae quis facilis doloribus consequuntur consequatur atque numquam accusantium? Corrupti rem vero doloribus aliquid consequatur quam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus alias odit omnis consequuntur. Eligendi nam est quos rem. Laudantium, ab. Quisquam ipsum tenetur ad saepe porro aspernatur ullam beatae autem.
+    </p>
+</body>
+</html>
