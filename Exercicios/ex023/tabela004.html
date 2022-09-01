@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            
+            border-collapse: collapse;
+            width: 500px;
+            font-size: 0.8em;  
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+            
+            
+        }
+
+        .center{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercício de tabelas</h1>
+    <table>
+        <caption style="font-size: 2em; padding: 10px;">Meus Filmes Favoritos</caption>
+        <thead >
+            <tr>
+                <th style="text-align: center ;" scope="col"><strong>Grupo</strong></th>
+                <th class="center" scope="col"><strong>Nomes</strong></th>
+                <th colspan="3" class="center" scope="colgroup"><strong>Filmes</strong></th>
+            </tr>
+        </thead>
+        <!--scope é a celula celecionada em relação a quem ela esta se refererindo.
+        No caso da celula "Filmes" ela se refere a varios filmes de varias celulas com colunas e linhas diferente e no cso da celula 'Total' embora seja mescada se refere somente a uma celula da mesma linha que é o '100' 
+        
+        -->
+        <tfoot>
+            <tr>
+                <th colspan="4" scope="row">Total</th>
+                <td>1000</td>
+            </tr>
+        </tfoot>
+
+        <tr>
+            <th rowspan="3" style="text-align: center"; scope="rowgroup"><strong>Mulheres</strong></th>
+            <td>Ana Maria Santos</td>
+            <td>Alien</td>
+            <td>Rambo</td>
+            <td>Vingadores</td>
+        </tr>
+        <tr>
+            <td>Beatriz Souza</td>
+            <td>Hulk</td>
+            <td>Inception</td>
+            <td>Batman</td>
+  
+            
+        </tr>
+        <tr>
+            <td>Claudia Melo</td>
+            <td>Oblivion</td>
+            <td>Matrix</td>
+            <td>Big Hero</td>
+   
+        </tr>
+        <tr>
+            <th rowspan="3" class="center" scope="rowgroup"><strong>Homens</strong></th>
+            <td>Bruno Mendonça</td>
+            <td>Intocáveis</td>
+            <td>Aminésia</td>
+            <td>Gladiator</td>
+        </tr>
+        <tr>
+            <td>Daniel Lorenço</td>
+            <td>Wall-E</td>
+            <td>Oldboy</td>
+            <td>Dangal</td>
+        </tr>
+        <tr>
+            <td>Fabiano Mota</td>
+            <td>Star Wars 5</td>
+            <td>Taxi Driver</td>
+            <td>Toy Story</td>
+        </tr>
+
+    </table>
+</body>
+</html>
