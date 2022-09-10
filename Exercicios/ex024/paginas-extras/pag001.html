@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebelas Responsivas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(247, 255, 196);
+        }
+        table{
+            border-collapse: collapse;
+        }
+        caption{
+            padding: 10px;
+            font-weight: bolder;
+            font-size: 1.3em;
+        }
+        th, td{
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        th:nth-child(even){ /*Efeito Zebrado*/
+            background-color: beige;
+        }
+        div#container{ /*Tornando a tabela responsiva e travando o que estiver fora da <div></div> */
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas em Telas pequenas</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, hic velit! Delectus soluta vel sit ipsam dolore placeat ea debitis quibusdam, quod, animi iusto harum error nemo nisi deserunt laborum?</p> 
+
+    <div id="container">
+        <table>
+            <caption>Tabelas Responsivas</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TV 40"</td>
+                    <td>Jan</td>
+                    <td>Fev</td>
+                    <td>Mar</td>
+                    <td>Abr</td>
+                    <td>Mai</td>
+                    <td>Jun</td>
+                    <td>Jul</td>
+                    <td>Ago</td>
+                    <td>Set</td>
+                    <td>Out</td>
+                    <td>Dez</td>
+                    <td>Mij</td>
+                </tr>
+                <tr>
+                    <td>Home theater</td>
+                    <td>Jan</td>
+                    <td>Fev</td>
+                    <td>Mar</td>
+                    <td>Abr</td>
+                    <td>Mai</td>
+                    <td>Jun</td>
+                    <td>Jul</td>
+                    <td>Ago</td>
+                    <td>Set</td>
+                    <td>Out</td>
+                    <td>Dez</td>
+                    <td>Mij</td>
+                </tr>
+                <tr>
+                    <td>Samsung Galaxy S20</td>
+                    <td>Jan</td>
+                    <td>Fev</td>
+                    <td>Mar</td>
+                    <td>Abr</td>
+                    <td>Mai</td>
+                    <td>Jun</td>
+                    <td>Jul</td>
+                    <td>Ago</td>
+                    <td>Set</td>
+                    <td>Out</td>
+                    <td>Dez</td>
+                    <td>Mij</td>
+                </tr>
+                <tr>
+                    <td>iPad Mini</td>
+                    <td>Jan</td>
+                    <td>Fev</td>
+                    <td>Mar</td>
+                    <td>Abr</td>
+                    <td>Mai</td>
+                    <td>Jun</td>
+                    <td>Jul</td>
+                    <td>Ago</td>
+                    <td>Set</td>
+                    <td>Out</td>
+                    <td>Dez</td>
+                    <td>Mij</td>
+                </tr>
+                <tr>
+                    <td>Play Station 4</td>
+                    <td>Jan</td>
+                    <td>Fev</td>
+                    <td>Mar</td>
+                    <td>Abr</td>
+                    <td>Mai</td>
+                    <td>Jun</td>
+                    <td>Jul</td>
+                    <td>Ago</td>
+                    <td>Set</td>
+                    <td>Out</td>
+                    <td>Dez</td>
+                    <td>Mij</td>
+                </tr>
+                <tr>
+                    <td>Luvas Louças</td>
+                    <td>Jan</td>
+                    <td>Fev</td>
+                    <td>Mar</td>
+                    <td>Abr</td>
+                    <td>Mai</td>
+                    <td>Jun</td>
+                    <td>Jul</td>
+                    <td>Ago</td>
+                    <td>Set</td>
+                    <td>Out</td>
+                    <td>Dez</td>
+                    <td>Mij</td>
+                </tr>
+                <tr>
+                    <td>Amazon ecto</td>
+                    <td>Jan</td>
+                    <td>Fev</td>
+                    <td>Mar</td>
+                    <td>Abr</td>
+                    <td>Mai</td>
+                    <td>Jun</td>
+                    <td>Jul</td>
+                    <td>Ago</td>
+                    <td>Set</td>
+                    <td>Out</td>
+                    <td>Dez</td>
+                    <td>Mij</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
