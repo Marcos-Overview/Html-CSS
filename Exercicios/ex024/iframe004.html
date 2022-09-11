@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframes</title>
+    <style>
+        iframe{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        meu site principal  
+    </h1>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci velit debitis iusto aliquam suscipit repellendus dicta doloribus. Optio ipsa ad, inventore illum commodi aliquam neque! Similique accusantium facilis est minima.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus magni sunt, velit aliquam vitae in nostrum, neque quibusdam reiciendis, eligendi ad dolor nulla corrupti veniam fuga voluptatum consectetur sapiente. Omnis?
+    </p>
+    <iframe src="paginas-extras/pag004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+    <!--
+    * sandbox="sandbox" é um artificil de segurança que não permite o usuário interagir com o frame e é uma protecão contra ataques
+
+
+
+    * referrerpolicy="no-referrer" não deixa o iframe colete nenhuma informação do usuário.
+    -->
+        <p>
+            Seu navegador não é compativel com isso!
+        </p>
+    </iframe>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nostrum deserunt similique ad eius quo aut, cumque dolor, ipsam sapiente ex vitae rerum, expedita libero vero neque quae? Cum, necessitatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ullam ratione fugit, iste praesentium earum laudantium pariatur voluptas minus animi deleniti placeat voluptates perferendis natus rerum asperiores provident laborum cupiditate?
+    </p>
+</body>
+</html>
