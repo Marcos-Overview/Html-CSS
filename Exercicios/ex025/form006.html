@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" autocomplete="on"   method="post">
+
+        <p>
+            <label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+        <!--o Value é pra deixar o objeto com uma conf inicial-->
+        <p>
+            <label for="inivel">Nível de satisfação:</label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="2">
+        </p>
+
+        <p>
+            <label for="ifoto">Foto:</label>
+            <input type="file" name="Foto" id="ifoto">
+        </p>
+        <!--Temos que usar o modo method="post" pois estamos enviando aquivos, trabalhando com fotos-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+            
+        </p>
+
+
+
+    </form>
+</body>
+</html>

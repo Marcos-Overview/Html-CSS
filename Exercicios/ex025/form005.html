@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+</head>
+<body>
+    <h1>
+        Exemplo de formulário
+    </h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <fieldset>
+
+            <legend>Sexo</legend>
+
+            <input type="radio" name="sexo" id="isexmas" value="M" checked> <label for="isexmas">Masculino</label> <br>
+
+            <input type="radio" name="sexo" id="isexfem" value="F"> <label for="isexfem">Feminino</label> <br>
+
+            <input type="radio" name="sexo" id="isextra" value="T"> <label for="isextra">Trans</label>
+            <!-- butão de RADIO
+                * Só uma opção;
+                * Colocar todos o name="sexo" iguais para poder desmarcar
+                *checked ja deixa uma opção marcada
+            -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+
+            <input type="checkbox" name="esfut" id="iesfut" checked > <label for="iesfut">Futebol</label> <br>
+            <!--checked ja deixa uma opção marcada-->
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tennis</label> <br>
+
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+
+            <input type="checkbox" name="esbas" id="iesbaq"> <label for="iesbaq">Basquete</label> <br>
+
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>
+
+<!--Envelopou os nomes dos esportes com label para conecta-los com a caixa isso ajuda quando estivermos no celular e clicarmos no nomes ele da um check ou tirar o mesmo-->
