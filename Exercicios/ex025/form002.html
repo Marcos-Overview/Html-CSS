@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de formulario</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário:</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10" placeholder="nome do usuário" autocomplete="username">
+        </p>
+
+        <p>
+            <label for="isen">senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="5" maxlength="10" size="8" placeholder="min 8 letras" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+    <!--required é uma exigencia para poder prosseguir com uma ação
+    size: quantas letras ele mostra por vez dentro da caixa
+    placeholder: vc deixar uma dica dentro da caixa pro usuário
+    autocomplete pode ser usando no input(+ opções) com mais opções porem vc tem que deixar ele on no <form></form>
+-->
+</body>
+</html>
